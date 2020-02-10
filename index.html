@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Load jQuery.js to support Bootstrap -->
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/pwGen.js"></script>
+
+    <!-- load Bootstrap js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section>
+
+        <div class="container centered outer">
+            <header>
+                <div class="header">
+                    Password Generator
+                </div>
+            </header>
+            <div class="inner">
+                <div class="title">
+                    Generate Password
+                </div>
+                <div class="pwBox">
+                    <div class="text-muted pwBanner">Your Secure Password</div>
+                    <div id="pwBoxID" class="pwDisplayBox"></div>
+                </div>
+            </div>
+            <div class="buttonRow">
+                <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#pwModal">Create
+                    Password</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- Modal -->
+        <div id="pwModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Begin Modal Content -->
+                <div class="modal-content">
+
+                    <form>
+
+                        <div class="modal-header">
+
+                            <div class="modal-title">
+                                <h5>Password Generator Settings</h5>
+                                <div class="small">Select the password options below</div>
+                            </div>
+
+
+                            <!-- Display Closing X in upper right corner of modal -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+
+                        <div class="modal-body">
+                            <div class="container">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="left-container">
+                                            <div style="font-size:small ">Character Types (Choose 3)</div>
+                                            <div id="checkboxes" class="optionsPanel ">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" name="charSet" type="checkbox" value="uppercase" id="upperCase">
+                                                    <label class="form-check-label" for="upperCase">Upper Case Letters
+                                                        [A-Z]</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" name="charSet" type="checkbox" value="lowercase" id="lowerCase">
+                                                    <label class="form-check-label" for="lowerCase">Lower Case Letters
+                                                        [a-z]</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" name="charSet" type="checkbox" value="special" id="special">
+                                                    <label class="form-check-label" for="special">Special Characters [!
+                                                        @ # $ % ^ &
+                                                        *]</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" name="charSet" type="checkbox" value="numeric" id="numeric">
+                                                    <label class="form-check-label" for="numeric">Numeric [0-9]</label>
+                                                </div>
+                                            </div>
+                                            <!-- /OptionsPanel -->
+
+
+                                            <div class="form-group">
+                                                <label for="pwLength" class="small">Password Length</label>
+                                                <input id="pwLength" type="number" class="form-control" size="4" maxlength="3" min="8" aria-describedby="helpId" placeholder="">
+
+                                                <small id="helpId" class="form-text text-muted">
+                                                    <span id="helpText">Range 8 - 128 characters (14 recommended)</span>
+                                                </small>
+                                            </div>
+                                            <!-- /Password Length -->
+                                        </div>
+                                        <!-- /left-container-->
+
+                                        <div class="right-container">
+
+                                            <div class="detailPanel small text-muted">
+                                                <span>Microsoft recommends 3 character types and a minimum length of 14
+                                                    characters for a password to be considered strong.</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- /Col -->
+                                </div>
+                                <!-- row -->
+                            </div>
+                            <!-- Container -->
+                        </div>
+                        <!-- /ModalBody-->
+
+
+
+                    </form>
+                    <div class="modal-footer">
+                        <div id="selected"></div>
+                        <button id="submitButton" class="btn btn-primary btn-sm btn-block" onclick="generatePW(this)">Continue</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

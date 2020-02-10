@@ -1,0 +1,110 @@
+body {
+    /* background-image: "/img/GreyParchment.jpg"; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.title {
+    /* padding-top: 1px; */
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+    border-bottom: 2px double lightgray;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.outer {
+    background-color: rgb(235, 235, 235);
+    border: 2px solid black;
+    /* rgb(249, 251, 253); */
+    max-width: 600px;
+}
+
+.inner {
+    background-color: white;
+    margin: 1px;
+    /* margin-bottom: 20px; */
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid darkgray;
+}
+
+.pwBox {
+    border-radius: 3px;
+    border-style: dashed;
+    border-color: lightgray;
+    /* padding: 10px; */
+}
+
+.pwBanner {
+    font-size: 11px;
+    text-align: center;
+    /* padding-bottom: 20px; */
+}
+
+.pwDisplayBox {
+    height: 40px;
+    text-align: center;
+    font-size: 18px
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.btn-danger {
+    border-radius: 5px;
+}
+
+
+/* MODAL */
+
+.container {
+    margin: 5px;
+}
+
+.right-container {
+    float: right;
+    margin-right: 5px;
+    width: 35%;
+}
+
+.left-container {
+    float: left;
+    width: 60%;
+}
+
+.buttonRow {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.optionsPanel {
+    float: left;
+    /* padding: 5px; */
+    border: 1px solid lightGray;
+    font-size: smaller;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.detailPanel {
+    float: right;
+    border: 1px solid lightGray;
+    font-size: smaller;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
